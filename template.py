@@ -42,7 +42,7 @@ list_of_files = [
 
     f"{project_name}/utils/__init__.py",
     f"{project_name}/utils/main_utils.py",
-    
+
     "app.py",
     "requirements.txt",
     "Dockerfile",
@@ -53,7 +53,6 @@ list_of_files = [
     "config/model.yaml",
     "config/schema.yaml",
 ]
-
 
 for filepath in list_of_files:
     filepath = Path(filepath)
