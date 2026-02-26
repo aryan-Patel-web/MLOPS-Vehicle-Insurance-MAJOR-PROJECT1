@@ -13,7 +13,8 @@ BACKUP_COUNT = 3  # Number of backup log files to keep
 
 # Construct log file path
 
-log_dir_path = os.path.join(from_root(), LOG_DIR)
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+log_dir_path = os.path.join(project_root, LOG_DIR)
 os.makedirs(log_dir_path, exist_ok=True)
 log_file_path = os.path.join(log_dir_path, LOG_FILE)
 
@@ -26,7 +27,7 @@ def configure_logger():
     logger.setLevel(logging.DEBUG)
     
     # Define formatter
-    
+
     formatter = logging.Formatter("[ %(asctime)s ] %(name)s - %(levelname)s - %(message)s")
 
     # File handler with rotation
