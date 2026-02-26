@@ -5,4 +5,3 @@ Developed a production-ready end-to-end MLOps pipeline for vehicle insurance pre
 Tech Stack: Python, Scikit-learn, MongoDB Atlas, AWS S3, EC2, ECR, Docker, GitHub Actions, Flask, MLOps, CI/CD
 
 
-mongodb+srv://patel914078:<patel914078>@mlops-major-project1.qqcsai5.mongodb.net/?appName=MLOPS-Major-Project1
