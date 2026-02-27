@@ -18,6 +18,7 @@ log_dir_path = os.path.join(project_root, LOG_DIR)
 os.makedirs(log_dir_path, exist_ok=True)
 log_file_path = os.path.join(log_dir_path, LOG_FILE)
 
+
 def configure_logger():
     """
     Configures logging with a rotating file handler and a console handler.
