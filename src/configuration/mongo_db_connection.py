@@ -38,6 +38,7 @@ class MongoDBClient:
         database_name : str, optional
             Name of the MongoDB database to connect to. Default is set by DATABASE_NAME constant.
 
+
         Raises:
         ------
         MyException
