@@ -6,6 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.compose import ColumnTransformer
 
+
 from src.constants import TARGET_COLUMN, SCHEMA_FILE_PATH, CURRENT_YEAR
 from src.entity.config_entity import DataTransformationConfig
 from src.entity.artifact_entity import DataTransformationArtifact, DataIngestionArtifact, DataValidationArtifact
@@ -32,6 +33,7 @@ class DataTransformation:
             return pd.read_csv(file_path)
         except Exception as e:
             raise MyException(e, sys)
+
 
     def get_data_transformer_object(self) -> Pipeline:
         """
