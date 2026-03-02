@@ -138,6 +138,9 @@ class DataTransformation:
             input_feature_test_df = self._rename_columns(input_feature_test_df)
             logging.info("Custom transformations applied to train and test data")
 
+
+
+
             logging.info("Starting data transformation")
             preprocessor = self.get_data_transformer_object()
             logging.info("Got the preprocessor object")
@@ -148,7 +151,12 @@ class DataTransformation:
             input_feature_test_arr = preprocessor.transform(input_feature_test_df)
             logging.info("Transformation done end to end to train-test df.")
 
+
+
+
+
             logging.info("Applying SMOTEENN for handling imbalanced dataset.")
+            
             smt = SMOTEENN(sampling_strategy="minority")
             input_feature_train_final, target_feature_train_final = smt.fit_resample(
                 input_feature_train_arr, target_feature_train_df
@@ -161,6 +169,9 @@ class DataTransformation:
             train_arr = np.c_[input_feature_train_final, np.array(target_feature_train_final)]
             test_arr = np.c_[input_feature_test_final, np.array(target_feature_test_final)]
             logging.info("feature-target concatenation done for train-test df.")
+
+
+
 
             save_object(self.data_transformation_config.transformed_object_file_path, preprocessor)
             save_numpy_array_data(self.data_transformation_config.transformed_train_file_path, array=train_arr)
