@@ -34,7 +34,6 @@ class SimpleStorageService:
         self.s3_client = s3_client.s3_client
 
 
-
     def s3_key_path_available(self, bucket_name, s3_key) -> bool:
         """
         Checks if a specified S3 key path (file path) is available in the specified bucket.
