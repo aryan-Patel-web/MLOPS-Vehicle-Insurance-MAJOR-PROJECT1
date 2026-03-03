@@ -262,8 +262,4 @@ artifact/
 
 ---
 
-
-
----
-
 > Built as a full-stack MLOps project demonstrating production ML engineering practices — modular pipelines, cloud integration, containerization, and automated deployment.
