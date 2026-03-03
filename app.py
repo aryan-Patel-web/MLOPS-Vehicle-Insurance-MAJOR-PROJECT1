@@ -41,6 +41,7 @@ class DataForm:
     """
     def __init__(self, request: Request):
         self.request: Request = request
+        
         self.Gender: Optional[int] = None
         self.Age: Optional[int] = None
         self.Driving_License: Optional[int] = None
@@ -60,6 +61,7 @@ class DataForm:
         This method is asynchronous to handle form data fetching without blocking.
         """
         form = await self.request.form()
+
         self.Gender = form.get("Gender")
         self.Age = form.get("Age")
         self.Driving_License = form.get("Driving_License")
