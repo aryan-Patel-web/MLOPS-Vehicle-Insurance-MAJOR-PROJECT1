@@ -5,7 +5,7 @@
 ![AWS](https://img.shields.io/badge/AWS-S3%20%7C%20EC2%20%7C%20ECR-orange?style=flat-square&logo=amazonaws)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue?style=flat-square&logo=docker)
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-black?style=flat-square&logo=githubactions)
-![Flask](https://img.shields.io/badge/Flask-Web%20App-lightgrey?style=flat-square&logo=flask)
+![Fastapi](https://img.shields.io/badge/Fastapi-Web%20App-lightgrey?style=flat-square&logo=Fastapi)
 
 A production-grade, end-to-end **Machine Learning pipeline** for predicting vehicle insurance outcomes — built with modular architecture, cloud integration, and full CI/CD automation.
 
@@ -13,7 +13,7 @@ A production-grade, end-to-end **Machine Learning pipeline** for predicting vehi
 
 ## 📌 Project Overview
 
-This project demonstrates a complete MLOps lifecycle — from raw data ingestion through MongoDB Atlas, model training with automated evaluation, to cloud deployment on AWS via a Dockerized Flask application with GitHub Actions CI/CD.
+This project demonstrates a complete MLOps lifecycle — from raw data ingestion through MongoDB Atlas, model training with automated evaluation, to cloud deployment on AWS via a Dockerized Fastapi application with GitHub Actions CI/CD.
 
 **Key Highlights:**
 - Modular ML pipeline with distinct components for ingestion, validation, transformation, training, evaluation, and deployment
@@ -28,7 +28,7 @@ This project demonstrates a complete MLOps lifecycle — from raw data ingestion
 ```
 MLOPS-Vehicle-Insurance-MAJOR-PROJECT1/
 │
-├── app.py                          # Flask application entry point
+├── app.py                          # Fastapi application entry point
 ├── demo.py                         # Component testing script
 ├── template.py                     # Project scaffolding script
 ├── setup.py                        # Local package installation
@@ -79,7 +79,7 @@ MLOPS-Vehicle-Insurance-MAJOR-PROJECT1/
 │   │
 │   ├── pipline/
 │   │   ├── training_pipeline.py    # Orchestrates full training flow
-│   │   └── prediction_pipeline.py  # Serves predictions via Flask
+│   │   └── prediction_pipeline.py  # Serves predictions via Fastapi
 │   │
 │   └── utils/
 │       └── main_utils.py           # Shared utility functions
@@ -133,11 +133,12 @@ MLOPS-Vehicle-Insurance-MAJOR-PROJECT1/
 | **ML / Data** | Scikit-learn, Pandas, NumPy |
 | **Database** | MongoDB Atlas |
 | **Cloud** | AWS S3, EC2, ECR |
-| **Web Framework** | Flask |
+| **Web Framework** | Fastapi |
 | **Containerization** | Docker |
 | **CI/CD** | GitHub Actions |
 | **Experiment Tracking** | Jupyter Notebooks |
 
+<<<<<<< HEAD
 ---
 
 ## 🚀 Getting Started
@@ -150,6 +151,30 @@ cd MLOPS-Vehicle-Insurance
 
 ### 2. Create & Activate Virtual Environment
 ```bash
+=======
+Python 3.10
+FastAPI
+Scikit-learn
+MongoDB Atlas
+AWS S3
+Docker
+GitHub Actions
+EC2 (Ubuntu)
+Conda
+
+⚙️ Project Setup
+1️⃣ Create Project Template
+python template.py
+2️⃣ Setup Packaging
+
+Write setup.py
+
+Write pyproject.toml
+Install local packages
+Reference: crashcourse.txt
+
+3️⃣ Create Virtual Environment
+>>>>>>> 751746a3d137499533589f128381027886ec105d
 conda create -n vehicle python=3.10 -y
 conda activate vehicle
 ```
@@ -162,8 +187,24 @@ pip list   # Verify local packages are installed
 
 ### 4. Set Environment Variables
 
+<<<<<<< HEAD
 **Bash / macOS / Linux:**
 ```bash
+=======
+pip list
+🍃 MongoDB Setup
+
+Create MongoDB Atlas account
+Create new project
+Create M0 Cluster
+Add DB user (username/password)
+Add Network Access:
+0.0.0.0/0
+Copy Python connection string
+
+Set Environment Variable
+For Bash
+>>>>>>> 751746a3d137499533589f128381027886ec105d
 export MONGODB_URL="mongodb+srv://<username>:<password>@cluster..."
 export AWS_ACCESS_KEY_ID="your_access_key"
 export AWS_SECRET_ACCESS_KEY="your_secret_key"
@@ -181,7 +222,7 @@ $env:AWS_SECRET_ACCESS_KEY = "your_secret_key"
 python demo.py
 ```
 
-### 6. Launch Flask App
+### 6. Launch Fastapi App
 ```bash
 python app.py
 ```
@@ -261,5 +302,6 @@ artifact/
 - **S3 Model Registry** — Models are versioned and stored in S3 under `model-registry/`; evaluation threshold of `0.02` prevents regression
 
 ---
+
 
 > Built as a full-stack MLOps project demonstrating production ML engineering practices — modular pipelines, cloud integration, containerization, and automated deployment.
