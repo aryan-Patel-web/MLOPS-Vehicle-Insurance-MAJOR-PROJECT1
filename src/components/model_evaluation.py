@@ -112,11 +112,14 @@ class ModelEvaluation:
 
             best_model_f1_score=None
             best_model = self.get_best_model()
+
             if best_model is not None:
                 logging.info(f"Computing F1_Score for production model..")
                 y_hat_best_model = best_model.predict(x)
+
                 best_model_f1_score = f1_score(y, y_hat_best_model)
                 logging.info(f"F1_Score-Production Model: {best_model_f1_score}, F1_Score-New Trained Model: {trained_model_f1_score}")
+            
             
             tmp_best_model_score = 0 if best_model_f1_score is None else best_model_f1_score
             result = EvaluateModelResponse(trained_model_f1_score=trained_model_f1_score,
