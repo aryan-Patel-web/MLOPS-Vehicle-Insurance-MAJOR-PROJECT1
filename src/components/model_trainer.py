@@ -8,8 +8,10 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 from src.exception import MyException
 from src.logger import logging
 from src.utils.main_utils import load_numpy_array_data, load_object, save_object
+
 from src.entity.config_entity import ModelTrainerConfig
 from src.entity.artifact_entity import DataTransformationArtifact, ModelTrainerArtifact, ClassificationMetricArtifact
+
 from src.entity.estimator import MyModel
 
 class ModelTrainer:
@@ -99,6 +101,7 @@ class ModelTrainer:
             # Save the final model object that includes both preprocessing and the trained model
             logging.info("Saving new model as performace is better than previous one.")
             my_model = MyModel(preprocessing_object=preprocessing_obj, trained_model_object=trained_model)
+            
             save_object(self.model_trainer_config.trained_model_file_path, my_model)
             logging.info("Saved final model object that includes both preprocessing and the trained model")
 

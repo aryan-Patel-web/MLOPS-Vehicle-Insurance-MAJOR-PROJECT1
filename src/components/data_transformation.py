@@ -119,10 +119,10 @@ class DataTransformation:
             test_df = self.read_data(file_path=self.data_ingestion_artifact.test_file_path)
             logging.info("Train-Test data loaded")
 
-            input_feature_train_df = train_df.drop(columns=[TARGET_COLUMN], axis=1)
+            input_feature_train_df = train_df.drop(columns=[TARGET_COLUMN], errors="ignore")
             target_feature_train_df = train_df[TARGET_COLUMN]
 
-            input_feature_test_df = test_df.drop(columns=[TARGET_COLUMN], axis=1)
+            input_feature_test_df = test_df.drop(columns=[TARGET_COLUMN], errors="ignore")
             target_feature_test_df = test_df[TARGET_COLUMN]
             logging.info("Input and Target cols defined for both train and test df.")
 
@@ -156,7 +156,7 @@ class DataTransformation:
 
 
             logging.info("Applying SMOTEENN for handling imbalanced dataset.")
-            
+
             smt = SMOTEENN(sampling_strategy="minority")
             input_feature_train_final, target_feature_train_final = smt.fit_resample(
                 input_feature_train_arr, target_feature_train_df
@@ -174,8 +174,10 @@ class DataTransformation:
 
 
             save_object(self.data_transformation_config.transformed_object_file_path, preprocessor)
+
             save_numpy_array_data(self.data_transformation_config.transformed_train_file_path, array=train_arr)
             save_numpy_array_data(self.data_transformation_config.transformed_test_file_path, array=test_arr)
+
             logging.info("Saving transformation object and transformed files.")
 
             logging.info("Data transformation completed successfully")
