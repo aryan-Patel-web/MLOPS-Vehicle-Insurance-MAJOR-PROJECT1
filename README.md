@@ -1,32 +1,20 @@
-# MLOPS-Vehicle-Insurance-MAJOR-PROJECT1
+# MLOPS-Vehicle-Insurance-MAJOR-PROJECT1-End-to-End MLOps Project
 
 Developed a production-ready end-to-end MLOps pipeline for vehicle insurance prediction using Python, MongoDB, and Scikit-learn. Implemented modular components including data ingestion, validation, transformation, model training, and prediction pipeline with robust logging and exception handling. Automated CI/CD and deployment using Docker, AWS S3, EC2, ECR, and GitHub Actions to enable scalable model versioning, containerization, and continuous delivery.
 
 Tech Stack: Python, Scikit-learn, MongoDB Atlas, AWS S3, EC2, ECR, Docker, GitHub Actions, Flask, MLOps, CI/CD
 
 
-🚗 Vehicle Insurance Prediction – End-to-End MLOps Project
-
-An end-to-end Machine Learning + MLOps production-ready system that predicts whether a customer will respond to vehicle insurance offers.
-
-This project demonstrates:
+This project demonstrates=>:
 
 Modular ML pipeline architecture
-
 MongoDB Atlas integration
-
 Data validation & transformation
-
 Model training & evaluation
-
 AWS S3 model registry
-
 Docker containerization
-
 CI/CD using GitHub Actions
-
 Deployment on AWS EC2
-
 FastAPI web application
 
 🏗️ Project Architecture
@@ -41,16 +29,13 @@ Vehicle Insurance ML System
 ├── Prediction Pipeline
 ├── FastAPI Web App
 └── CI/CD + Docker + EC2 Deployment
+
 🌐 Web Application
 
 The application is built using:
-
 FastAPI
-
 Jinja2 Templates
-
 HTML + CSS (Static files)
-
 Uvicorn server
 
 Routes:
@@ -61,21 +46,13 @@ Route	Description
 🛠️ Tech Stack
 
 Python 3.10
-
 FastAPI
-
 Scikit-learn
-
 MongoDB Atlas
-
 AWS S3
-
 Docker
-
 GitHub Actions
-
 EC2 (Ubuntu)
-
 Conda
 
 ⚙️ Project Setup
@@ -86,9 +63,7 @@ python template.py
 Write setup.py
 
 Write pyproject.toml
-
 Install local packages
-
 Reference: crashcourse.txt
 
 3️⃣ Create Virtual Environment
@@ -102,17 +77,11 @@ pip list
 🍃 MongoDB Setup
 
 Create MongoDB Atlas account
-
 Create new project
-
 Create M0 Cluster
-
 Add DB user (username/password)
-
 Add Network Access:
-
 0.0.0.0/0
-
 Copy Python connection string
 
 Set Environment Variable
