@@ -29,8 +29,11 @@ class SimpleStorageService:
         from the S3Client class.
         """
         s3_client = S3Client()
+
         self.s3_resource = s3_client.s3_resource
         self.s3_client = s3_client.s3_client
+
+
 
     def s3_key_path_available(self, bucket_name, s3_key) -> bool:
         """
@@ -49,6 +52,8 @@ class SimpleStorageService:
             return len(file_objects) > 0
         except Exception as e:
             raise MyException(e, sys)
+
+
 
     @staticmethod
     def read_object(object_name: str, decode: bool = True, make_readable: bool = False) -> Union[StringIO, str]:
@@ -77,6 +82,9 @@ class SimpleStorageService:
         except Exception as e:
             raise MyException(e, sys) from e
 
+
+
+
     def get_bucket(self, bucket_name: str) -> Bucket:
         """
         Retrieves the S3 bucket object based on the provided bucket name.
@@ -88,12 +96,17 @@ class SimpleStorageService:
             Bucket: S3 bucket object.
         """
         logging.info("Entered the get_bucket method of SimpleStorageService class")
+
         try:
             bucket = self.s3_resource.Bucket(bucket_name)
+
             logging.info("Exited the get_bucket method of SimpleStorageService class")
             return bucket
         except Exception as e:
             raise MyException(e, sys) from e
+
+
+
 
     def get_file_object(self, filename: str, bucket_name: str) -> Union[List[object], object]:
         """
@@ -117,6 +130,9 @@ class SimpleStorageService:
         except Exception as e:
             raise MyException(e, sys) from e
 
+
+
+
     def load_model(self, model_name: str, bucket_name: str, model_dir: str = None) -> object:
         """
         Loads a serialized model from the specified S3 bucket.
@@ -139,6 +155,9 @@ class SimpleStorageService:
         except Exception as e:
             raise MyException(e, sys) from e
 
+
+
+
     def create_folder(self, folder_name: str, bucket_name: str) -> None:
         """
         Creates a folder in the specified S3 bucket.
@@ -157,6 +176,8 @@ class SimpleStorageService:
                 folder_obj = folder_name + "/"
                 self.s3_client.put_object(Bucket=bucket_name, Key=folder_obj)
             logging.info("Exited the create_folder method of SimpleStorageService class")
+
+
 
     def upload_file(self, from_filename: str, to_filename: str, bucket_name: str, remove: bool = True):
         """
@@ -182,6 +203,9 @@ class SimpleStorageService:
         except Exception as e:
             raise MyException(e, sys) from e
 
+
+
+
     def upload_df_as_csv(self, data_frame: DataFrame, local_filename: str, bucket_filename: str, bucket_name: str) -> None:
         """
         Uploads a DataFrame as a CSV file to the specified S3 bucket.
@@ -201,6 +225,10 @@ class SimpleStorageService:
         except Exception as e:
             raise MyException(e, sys) from e
 
+
+
+
+
     def get_df_from_object(self, object_: object) -> DataFrame:
         """
         Converts an S3 object to a DataFrame.
@@ -219,6 +247,9 @@ class SimpleStorageService:
             return df
         except Exception as e:
             raise MyException(e, sys) from e
+
+
+
 
     def read_csv(self, filename: str, bucket_name: str) -> DataFrame:
         """
