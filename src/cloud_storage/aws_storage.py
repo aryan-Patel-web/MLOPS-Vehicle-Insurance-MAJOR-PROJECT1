@@ -17,7 +17,6 @@ from pandas import DataFrame,read_csv
 import pickle
 
 
-
 class SimpleStorageService:
     """
     A class for interacting with AWS S3 storage, providing methods for file management, 
