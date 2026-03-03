@@ -10,7 +10,9 @@ from typing import Optional
 
 # Importing constants and pipeline modules from the project
 from src.constants import APP_HOST, APP_PORT
+
 from src.pipline.prediction_pipeline import VehicleData, VehicleDataClassifier
+
 from src.pipline.training_pipeline import TrainPipeline
 
 # Initialize FastAPI application
@@ -41,7 +43,7 @@ class DataForm:
     """
     def __init__(self, request: Request):
         self.request: Request = request
-        
+
         self.Gender: Optional[int] = None
         self.Age: Optional[int] = None
         self.Driving_License: Optional[int] = None
@@ -73,6 +75,7 @@ class DataForm:
         self.Vehicle_Age_lt_1_Year = form.get("Vehicle_Age_lt_1_Year")
         self.Vehicle_Age_gt_2_Years = form.get("Vehicle_Age_gt_2_Years")
         self.Vehicle_Damage_Yes = form.get("Vehicle_Damage_Yes")
+
 
 # Route to render the main page with the form
 @app.get("/", tags=["authentication"])
