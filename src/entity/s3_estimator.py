@@ -1,6 +1,11 @@
 from src.cloud_storage.aws_storage import SimpleStorageService
 from src.exception import MyException
+
+
+
 from src.entity.estimator import MyModel
+
+
 import sys
 from pandas import DataFrame
 
@@ -16,7 +21,9 @@ class Proj1Estimator:
         :param model_path: Location of your model in bucket
         """
         self.bucket_name = bucket_name
+
         self.s3 = SimpleStorageService()
+
         self.model_path = model_path
         self.loaded_model:MyModel=None
 
@@ -60,7 +67,10 @@ class Proj1Estimator:
         """
         try:
             if self.loaded_model is None:
+
                 self.loaded_model = self.load_model()
+
             return self.loaded_model.predict(dataframe=dataframe)
+        
         except Exception as e:
             raise MyException(e, sys)
