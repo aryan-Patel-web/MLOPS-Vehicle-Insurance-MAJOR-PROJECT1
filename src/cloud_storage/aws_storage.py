@@ -121,6 +121,7 @@ class SimpleStorageService:
         logging.info("Entered the get_file_object method of SimpleStorageService class")
         try:
             bucket = self.get_bucket(bucket_name)
+            
             file_objects = [file_object for file_object in bucket.objects.filter(Prefix=filename)]
             func = lambda x: x[0] if len(x) == 1 else x
             file_objs = func(file_objects)

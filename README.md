@@ -138,7 +138,6 @@ MLOPS-Vehicle-Insurance-MAJOR-PROJECT1/
 | **CI/CD** | GitHub Actions |
 | **Experiment Tracking** | Jupyter Notebooks |
 
-<<<<<<< HEAD
 ---
 
 ## 🚀 Getting Started
@@ -151,30 +150,6 @@ cd MLOPS-Vehicle-Insurance
 
 ### 2. Create & Activate Virtual Environment
 ```bash
-=======
-Python 3.10
-FastAPI
-Scikit-learn
-MongoDB Atlas
-AWS S3
-Docker
-GitHub Actions
-EC2 (Ubuntu)
-Conda
-
-⚙️ Project Setup
-1️⃣ Create Project Template
-python template.py
-2️⃣ Setup Packaging
-
-Write setup.py
-
-Write pyproject.toml
-Install local packages
-Reference: crashcourse.txt
-
-3️⃣ Create Virtual Environment
->>>>>>> 751746a3d137499533589f128381027886ec105d
 conda create -n vehicle python=3.10 -y
 conda activate vehicle
 ```
@@ -187,24 +162,8 @@ pip list   # Verify local packages are installed
 
 ### 4. Set Environment Variables
 
-<<<<<<< HEAD
 **Bash / macOS / Linux:**
 ```bash
-=======
-pip list
-🍃 MongoDB Setup
-
-Create MongoDB Atlas account
-Create new project
-Create M0 Cluster
-Add DB user (username/password)
-Add Network Access:
-0.0.0.0/0
-Copy Python connection string
-
-Set Environment Variable
-For Bash
->>>>>>> 751746a3d137499533589f128381027886ec105d
 export MONGODB_URL="mongodb+srv://<username>:<password>@cluster..."
 export AWS_ACCESS_KEY_ID="your_access_key"
 export AWS_SECRET_ACCESS_KEY="your_secret_key"
