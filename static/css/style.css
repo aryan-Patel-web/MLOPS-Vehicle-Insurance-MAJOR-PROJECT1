@@ -742,6 +742,7 @@ input[type=number] { -moz-appearance: textfield; }
 }
 ::-webkit-scrollbar-thumb:hover { background: rgba(0, 200, 255, 0.4); }
 
+
 /* ─────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────── */
