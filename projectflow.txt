@@ -111,9 +111,13 @@
         Go inside user >> Security Credentials >> Access Keys >> create access key >> CLI >> check agreement
         >> next >> create access key >> download csv
       * Now create one ECR repo to store/save docker image:
+
         AWS console >> Go to ECR >> Region: us-east-1 >> Hit create repository >>
+
         repo name: vehicleproj >> hit create repository >> copy and keep uri
+
       * Now create EC2 Ubuntu server >> AWS console >> EC2 >> Launch Instance >> name: vehicledata-machine
+      
         >> Image: Ubuntu >> AMI: Ubuntu Server 24.04 (free tier) >> Instance: T2 Medium (~chargeable-3.5rs/hr)
         >> create new key pair (name: proj1key) >> allow for https and http traffic >> storage: 30gb >> Launch
         >> Go to instance >> click on "Connect" >> Connect using EC2 Instance Connect 

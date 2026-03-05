@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+<!-- <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Insurance Prediction</title>
-    <!-- Corrected the CSS path -->
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
+    Corrected the CSS path -->
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+<!-- </head> -->
+<!-- <body>
+
     <div class="container">
         <h1>Vehicle Insurance Prediction</h1>
 
@@ -58,5 +59,284 @@
             </div>
         {% endif %}
     </div>
+</body>
+</html>  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Insurance Prediction</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Animated background -->
+    <div class="bg-scene">
+        <div class="grid-plane"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="particle-field">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-icon">
+                <div class="icon-3d">
+                    <div class="cube">
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-text">
+                <h1>Insurance<span class="accent"> Predictor</span></h1>
+                <p class="subtitle">AI-Powered Vehicle Insurance Intelligence</p>
+            </div>
+            <div class="status-badge">
+                <span class="dot"></span> LIVE
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider">
+            <div class="line"></div>
+            <div class="diamond"></div>
+            <div class="line"></div>
+        </div>
+
+        <!-- Main Form -->
+        <form method="post" action="/" class="predict-form">
+
+            <div class="section-label">
+                <span class="section-num">01</span>
+                <span>Customer Profile</span>
+            </div>
+
+            <div class="field-grid">
+                <div class="field-group">
+                    <label for="Gender">
+                        <span class="label-icon">⚧</span>
+                        Gender
+                        <span class="label-hint">1=Male, 0=Female</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" id="Gender" name="Gender" min="0" max="1" required placeholder="0 or 1">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="Age">
+                        <span class="label-icon">◈</span>
+                        Age
+                        <span class="label-hint">Years</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" id="Age" name="Age" required placeholder="Enter age">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="Driving_License">
+                        <span class="label-icon">◉</span>
+                        Driving License
+                        <span class="label-hint">0=No, 1=Yes</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" id="Driving_License" name="Driving_License" min="0" max="1" required placeholder="0 or 1">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="Region_Code">
+                        <span class="label-icon">◈</span>
+                        Region Code
+                        <span class="label-hint">Numeric</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" step="0.01" id="Region_Code" name="Region_Code" required placeholder="e.g. 28.0">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-label">
+                <span class="section-num">02</span>
+                <span>Vehicle & Policy</span>
+            </div>
+
+            <div class="field-grid">
+                <div class="field-group">
+                    <label for="Previously_Insured">
+                        <span class="label-icon">◈</span>
+                        Previously Insured
+                        <span class="label-hint">0=No, 1=Yes</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" id="Previously_Insured" name="Previously_Insured" min="0" max="1" required placeholder="0 or 1">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="Annual_Premium">
+                        <span class="label-icon">◉</span>
+                        Annual Premium
+                        <span class="label-hint">Amount</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" step="0.01" id="Annual_Premium" name="Annual_Premium" required placeholder="e.g. 40000">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="Policy_Sales_Channel">
+                        <span class="label-icon">◈</span>
+                        Sales Channel
+                        <span class="label-hint">Channel ID</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" step="0.01" id="Policy_Sales_Channel" name="Policy_Sales_Channel" required placeholder="e.g. 152">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="Vintage">
+                        <span class="label-icon">◉</span>
+                        Vintage
+                        <span class="label-hint">Days</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" id="Vintage" name="Vintage" required placeholder="e.g. 200">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-label">
+                <span class="section-num">03</span>
+                <span>Vehicle Condition</span>
+            </div>
+
+            <div class="field-grid field-grid-3">
+                <div class="field-group">
+                    <label for="Vehicle_Age_lt_1_Year">
+                        <span class="label-icon">◈</span>
+                        Age &lt; 1 Year
+                        <span class="label-hint">0=No, 1=Yes</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" id="Vehicle_Age_lt_1_Year" name="Vehicle_Age_lt_1_Year" min="0" max="1" required placeholder="0 or 1">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="Vehicle_Age_gt_2_Years">
+                        <span class="label-icon">◉</span>
+                        Age &gt; 2 Years
+                        <span class="label-hint">0=No, 1=Yes</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" id="Vehicle_Age_gt_2_Years" name="Vehicle_Age_gt_2_Years" min="0" max="1" required placeholder="0 or 1">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="Vehicle_Damage_Yes">
+                        <span class="label-icon">◈</span>
+                        Vehicle Damage
+                        <span class="label-hint">0=No, 1=Yes</span>
+                    </label>
+                    <div class="input-wrap">
+                        <input type="number" id="Vehicle_Damage_Yes" name="Vehicle_Damage_Yes" min="0" max="1" required placeholder="0 or 1">
+                        <div class="input-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-predict">
+                <span class="btn-inner">
+                    <span class="btn-glow"></span>
+                    <span class="btn-icon">▶</span>
+                    <span class="btn-text">Run Prediction</span>
+                    <span class="btn-arrow">→</span>
+                </span>
+            </button>
+        </form>
+
+        <!-- Train button -->
+        <form method="get" action="/train" class="train-form">
+            <button type="submit" class="btn-train">
+                <span class="btn-inner">
+                    <span class="btn-icon">⚙</span>
+                    <span class="btn-text">Train Model</span>
+                </span>
+            </button>
+        </form>
+
+        <!-- Result -->
+        {% if context %}
+        <div class="result-panel">
+            <div class="result-header">
+                <span class="result-label">PREDICTION OUTPUT</span>
+                <span class="result-tag">AI RESULT</span>
+            </div>
+            <div class="result-body">
+                <div class="result-icon-wrap">
+                    <div class="result-ring"></div>
+                    <span class="result-icon">◎</span>
+                </div>
+                <h2 class="result-value">{{ context }}</h2>
+            </div>
+            <div class="result-bar">
+                <div class="result-bar-fill"></div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <script>
+        // Input focus 3D tilt
+        document.querySelectorAll('.field-group').forEach(group => {
+            const input = group.querySelector('input');
+            input.addEventListener('focus', () => group.classList.add('focused'));
+            input.addEventListener('blur', () => group.classList.remove('focused'));
+        });
+
+        // Container subtle tilt on mouse move
+        const container = document.querySelector('.container');
+        document.addEventListener('mousemove', (e) => {
+            const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+            const dx = (e.clientX - cx) / cx, dy = (e.clientY - cy) / cy;
+            container.style.transform = `perspective(1200px) rotateY(${dx * 3}deg) rotateX(${-dy * 2}deg)`;
+        });
+        document.addEventListener('mouseleave', () => {
+            container.style.transform = `perspective(1200px) rotateY(0deg) rotateX(0deg)`;
+        });
+    </script>
 </body>
 </html>
