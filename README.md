@@ -23,6 +23,19 @@ This project demonstrates a complete MLOps lifecycle — from raw data ingestion
 
 ---
 
+## Live Demo
+
+🚀 Deployed Application
+
+http://3.237.0.238:5000
+
+This project demonstrates a production-style MLOps pipeline with:
+- Docker containerization
+- GitHub Actions CI/CD
+- AWS ECR image registry
+- AWS EC2 deployment
+- FastAPI inference API
+
 ## 🗂️ Project Structure
 
 ```
