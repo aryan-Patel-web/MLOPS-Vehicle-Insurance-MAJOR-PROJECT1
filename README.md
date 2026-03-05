@@ -144,7 +144,8 @@ MLOPS-Vehicle-Insurance-MAJOR-PROJECT1/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/MLOPS-Vehicle-Insurance.git
+git clone
+ https://github.com/aryan-Patel-web/MLOPS-Vehicle-Insurance.git
 cd MLOPS-Vehicle-Insurance
 ```
 
