@@ -98,6 +98,12 @@
 25. Create the code structure of "Prediction Pipeline" and setup your app.py
 26. Add "static" and "template" dir to the project.
 
+
+
+
+
+
+
 27. Getting started with CI-CD process:
       * Setup the dockerfile and .dockerignore file
       * Setup the .github\workflows dir and aws.yaml file within
