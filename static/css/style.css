@@ -715,7 +715,6 @@ input[type=number] { -moz-appearance: textfield; }
     0%   { background-position: 0% center; }
     100% { background-position: 200% center; }
 }
-
 .result-bar {
     height: 3px;
     background: rgba(0, 200, 255, 0.1);
@@ -730,7 +729,6 @@ input[type=number] { -moz-appearance: textfield; }
     from { width: 0; }
     to   { width: 100%; }
 }
-
 /* ─────────────────────────────────────
    SCROLLBAR
 ───────────────────────────────────── */
@@ -741,7 +739,6 @@ input[type=number] { -moz-appearance: textfield; }
     border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover { background: rgba(0, 200, 255, 0.4); }
-
 
 /* ─────────────────────────────────────
    RESPONSIVE
