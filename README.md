@@ -247,7 +247,7 @@ ECR_REPO
 |-------|--------|-------------|
 | `/` | GET | Home — prediction form |
 | `/predict` | POST | Returns insurance prediction |
-| `/training` | GET | Triggers full ML training pipeline |
+| `/train` | GET | Triggers full ML training pipeline |
 
 ---
 
@@ -675,6 +675,5 @@ artifact/
 
 *Modular pipelines · Cloud integration · Automated deployment · Model versioning · Clean architecture*
 
-⭐ Star this repo if you found it useful!
 
 </div>
