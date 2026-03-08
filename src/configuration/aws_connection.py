@@ -5,7 +5,6 @@ class S3Client:
 
     s3_client=None
     s3_resource = None
-    
     def __init__(self, region_name=REGION_NAME):
         """ 
         This Class gets aws credentials from env_variable and creates an connection with s3 bucket 
@@ -33,6 +32,7 @@ class S3Client:
                                         aws_secret_access_key=__secret_access_key,
                                         region_name=region_name
                                         )
+                                        
             
             
         self.s3_resource = S3Client.s3_resource
