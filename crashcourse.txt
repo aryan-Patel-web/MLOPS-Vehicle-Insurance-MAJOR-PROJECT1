@@ -1,5 +1,7 @@
 1. What is a pyproject.toml file?
 
+
+
 TOML (Tom’s Obvious, Minimal Language): It’s a simple configuration file format (like JSON or YAML) but is easier to read and write. 
 TOML is becoming the standard for Python packaging metadata.
 
@@ -10,7 +12,11 @@ TOML is becoming the standard for Python packaging metadata.
 > It centralizes metadata about the project: project name, version, dependencies, authors, etc.
 > It supports various build systems (like setuptools, poetry, etc.).
 
+
+
 3. Explaining sections of pyproject.toml:
+
+
 
 [project]: Defines the basic project information (name, version, description, authors).
 [tool.setuptools]: Specifies that setuptools is being used to build the project.
@@ -39,6 +45,9 @@ it (as we did) so that package dependencies are automatically pulled from there.
 ------------------------------------------------------------------------------------------------------------------------------------
 
 Cross-Origin Resource Sharing (CORS)
+
+
+
 
 Original: Allow all origins for Cross-Origin Resource Sharing (CORS) Configure middleware to handle CORS, allowing requests 
 from any origin.
