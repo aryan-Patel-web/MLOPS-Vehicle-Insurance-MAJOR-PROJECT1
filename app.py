@@ -57,6 +57,7 @@ class DataForm:
         self.Vehicle_Damage_Yes: Optional[int] = None
                 
 
+
     async def get_vehicle_data(self):
         """
         Method to retrieve and assign form data to class attributes.
