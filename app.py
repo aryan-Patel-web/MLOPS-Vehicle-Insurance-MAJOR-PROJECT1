@@ -58,6 +58,8 @@ class DataForm:
                 
 
 
+
+
     async def get_vehicle_data(self):
         """
         Method to retrieve and assign form data to class attributes.
